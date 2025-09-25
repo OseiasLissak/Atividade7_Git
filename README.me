@@ -1,68 +1,74 @@
-📚 Atividades Java: Fundamentos de POO e Design Patterns
-Este repositório contém uma coleção de exercícios práticos em Java focados em conceitos essenciais da Programação Orientada a Objetos (POO) e em padrões de design (como Strategy).
+# 🚀 Atividades Java: Fundamentos de POO e Design Patterns
 
-Estrutura do Projeto
-O código está organizado em pacotes (exercicioX), com cada número correspondendo a um desafio específico.
+[![Java 17+](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://www.java.com/)
+[![Licença](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+Este repositório contém uma coleção de **8 exercícios práticos em Java**, focados em demonstrar e aplicar conceitos essenciais da **Programação Orientada a Objetos (POO)** e padrões de design, como o **Strategy**.
+
+---
+
+## 🎯 Conceitos Chave por Exercício
+
+| Exercício | Conceito Principal | Classes Chave |
+| :---: | :--- | :--- |
+| **1 & 2** | **Encapsulamento** e **Validação** | `Produto.java` (Getters/Setters com validação de preço e desconto) |
+| **3** | **Herança** e **Polimorfismo** | `Funcionario`, `Gerente`, `Desenvolvedor` e `List<Funcionario>` |
+| **4** | **Interface** e **Polimorfismo** | `IMeioTransporte`, `Carro`, `Bicicleta`, `Trem` |
+| **5** | **Abstração** e **Polimorfismo** | `FormaPagamento (abstract)`, `CartaoCredito`, `SimuladorPagamentos` |
+| **6** | **Imutabilidade** e **Objeto de Valor** | `Dinheiro (final)`, `Carrinho (retorna novo objeto)` |
+| **7** | **Generics** e **Interfaces Genéricas** | `IRepository<T, ID>`, `InMemoryRepository` |
+| **8** | **Padrão Strategy** e **Lambdas** | `CalculoFreteStrategy` (injetável no `Pedido`), `SimuladorFrete` |
+
+---
+
+## 📂 Estrutura do Projeto
+
+O código está organizado em pacotes (`exercicioX`) que correspondem à numeração das atividades.
+
 
 src
-├── exercicio1/         (Encapsulamento - Produto)
-├── exercicio2/         (Encapsulamento e Desconto)
-├── exercicio3/         (Herança e Polimorfismo - Funcionários)
-├── exercicio4/         (Interface e Polimorfismo - IMeioTransporte)
-├── exercicio5/         (Abstração - Sistema de Pagamentos)
+├── exercicio1/
+
+├── exercicio2/
+
+├── exercicio3/
+
+├── exercicio4/
+
+├── exercicio5/         # Sistema de Pagamentos
 │   └── pagamentos/
-├── exercicio6/         (Imutabilidade e Objetos de Valor - Carrinho)
+├── exercicio6/         # Carrinho Imutável
 │   └── modelo/
-├── exercicio7/         (Generics - Repositório Genérico)
+├── exercicio7/         # Repositório Genérico
 │   └── repository/
-└── exercicio8/         (Padrão Strategy com Lambdas - Frete)
-    ├── frete/
-    └── modelo/
-Como Executar os Exercícios
-Todos os exercícios incluem uma classe principal (geralmente nomeada Simulador..., Programa... ou Main) que demonstra o uso e testa as validações de cada componente.
+└── exercicio8/         # Padrão Strategy
+├── frete/
+└── modelo/
 
-1. Pré-requisitos
-Certifique-se de ter o Java Development Kit (JDK) 17 ou superior instalado em sua máquina.
+---
 
-2. Execução via IDE (Recomendado)
-A maneira mais fácil de testar o código:
+## ⚙️ Como Executar os Códigos
 
-Importar o Projeto: Abra o diretório raiz deste projeto na sua IDE (IntelliJ, Eclipse, etc.).
+Todos os exercícios incluem uma classe principal (geralmente nomeada **`Simulador...`**, **`Programa...`** ou **`Main`**) que demonstra o fluxo e as validações do código.
 
-Localizar o Arquivo: Navegue até a pasta do exercício que deseja testar (ex: exercicio8).
+### 1. Pré-requisitos
 
-Executar: Clique com o botão direito no arquivo principal (ex: SimuladorFrete.java) e selecione a opção "Run 'Simulador...main()'".
+Certifique-se de ter o **Java Development Kit (JDK) 17 ou superior** instalado.
 
-O console da IDE exibirá o fluxo de execução e as validações do exercício.
+### 2. Execução via IDE (Recomendado)
 
-3. Execução via Linha de Comando (Manual)
-Se precisar compilar e executar via terminal:
+A forma mais fácil de executar o código é através de uma IDE (IntelliJ, Eclipse, VS Code, etc.):
 
-A. Compilar Todos os Arquivos
-Execute este comando no diretório raiz do projeto (ou no diretório pai de src):
+1.  **Clone o Repositório:** Carregue o projeto na sua IDE.
+2.  **Selecione o Teste:** Navegue até o arquivo principal do exercício que deseja testar (ex: `exercicio8/SimuladorFrete.java`).
+3.  **Execute:** Clique com o botão direito no arquivo e escolha a opção **"Run 'NomeDaClasse.main()'"**.
 
-Bash
+### 3. Execução via Linha de Comando (Manual)
 
-# Compila todos os arquivos .java e coloca os .class no diretório 'out'
+Se preferir utilizar o terminal:
+
+#### A. Compilação (a partir do diretório raiz)
+
+```bash
+# Compila todos os arquivos .java e gera os arquivos .class no diretório 'out'
 javac -d out $(find src -name "*.java")
-B. Executar um Exercício Específico
-Use o nome completo do pacote para rodar a classe principal (substitua exercicioX.NomeDaClasse):
-
-Bash
-
-java -classpath out exercicio8.SimuladorFrete
-Exercício	Classe Principal (Exemplos)
-Ex. 5	exercicio5.SimuladorPagamentos
-Ex. 6	exercicio6.SimuladorCarrinho
-Ex. 8	exercicio8.SimuladorFrete
-
-Exportar para as Planilhas
-Tabela de Conceitos
-Exercício	Conceito Principal	Exemplo de Implementação
-Ex. 1 & 2	Encapsulamento (Validação)	Produto.java (Getters/Setters com validação de preço/estoque)
-Ex. 3	Herança e Polimorfismo	Funcionario, Gerente, Desenvolvedor e List<Funcionario>
-Ex. 4	Interface e Polimorfismo	IMeioTransporte (acelerar/frear)
-Ex. 5	Abstração e Polimorfismo	FormaPagamento (abstract) e suas classes concretas
-Ex. 6	Imutabilidade e Objeto de Valor	Dinheiro (final), Carrinho (retorna novo objeto)
-Ex. 7	Generics e Interfaces Genéricas	IRepository<T, ID>, InMemoryRepository
-Ex. 8	Padrão Strategy e Lambdas	CalculoFreteStrategy (injetável no Pedido)
