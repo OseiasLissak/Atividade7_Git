@@ -21,32 +21,6 @@ Este repositório contém uma coleção de **8 exercícios práticos em Java**, 
 
 ---
 
-## 📂 Estrutura do Projeto
-
-O código está organizado em pacotes (`exercicioX`) que correspondem à numeração das atividades.
-
-
-src
-├── exercicio1/
-
-├── exercicio2/
-
-├── exercicio3/
-
-├── exercicio4/
-
-├── exercicio5/         # Sistema de Pagamentos
-│   └── pagamentos/
-├── exercicio6/         # Carrinho Imutável
-│   └── modelo/
-├── exercicio7/         # Repositório Genérico
-│   └── repository/
-└── exercicio8/         # Padrão Strategy
-├── frete/
-└── modelo/
-
----
-
 ## ⚙️ Como Executar os Códigos
 
 Todos os exercícios incluem uma classe principal (geralmente nomeada **`Simulador...`**, **`Programa...`** ou **`Main`**) que demonstra o fluxo e as validações do código.
